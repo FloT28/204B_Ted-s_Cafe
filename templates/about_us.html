@@ -27,8 +27,6 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
   border-radius: 15px;
-  width: 100px;
-  height: 30px;
 }
 
 /*navigation button hover*/
@@ -51,11 +49,61 @@ footer {
   height:10%;
 }
 
-/*cover-image style*/
-.cover{
-  width: 1000%;
-  height:10%;
+/*cover + title image style*/
+.Images {
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+      
+.cover {
+    position: relative;
+    top: 0;
+    left: 0;
+      }
+    
+.title {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    opacity:90%;
+      }
+
+.container1 {
+  width: 510px;
+  height:130px;
+  right:50px;
+  background-color:rgb(214, 211, 211);
+  border-radius:6%;
+  text-align:center;
+  margin-left:50%;
+  margin-top :3%;
+  font-size:25px;
 }
+
+.p1{
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*about_us image style*/
+.about_us {
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+
+.about_image{
+    position:absolute;
+    margin-top: -8%;
+    margin-left:10%;
+}
+
+/*about_us subtitle*/
+.sub_title{
+  margin-left:50%;
+  margin-top:2%;
+}
+
 </style>
 
 
@@ -63,20 +111,37 @@ footer {
 
 <!--Navigation Bar-->
 <ul>
-  <li><a class="active" href="#home">Home/About</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a class="active" href="#AboutUs">About Us</a></li>
+  <li><a href="#checkout">Checkout</a></li> 
   <li><a href="#menu">Menu</a></li>
-  <li><a href="#checkout">Checkout</a></li>
+  <li><a href="#contact">Contact</a></li>
 </ul>
 
-<!--Cover image-->
-<div class=".cover">
-     <img src="https://i.postimg.cc/XqyhHdWj/cover2.jpg" style="width:1330px; height:160px" >
-     <!--Title image (to-be-done by 06/08/25)-->
+<!--Cover/Title Images-->
+<div class="Images">
+    <img class="cover" src="https://i.postimg.cc/XqyhHdWj/cover2.jpg" style="width:1330px; height:180px" />
+    <img class="title" src="https://i.postimg.cc/bw67vzmj/Title.jpg" />
 </div>
 
-<!--Title-->
-<!--Google Maps-->
+<!--About_Us Title-->
+<img class="sub_title" src="https://i.postimg.cc/x8w4yFNj/about-us.jpg" style="width:520px; height:100px"/>
+
+<!--About_us Image-->
+<div class="about_us">
+     <img class="about_image" src="https://i.postimg.cc/QxfxXQ74/about-usimage.jpg" style="width:270px; height:270px"/>
+</div>
+
+<!--About Us - description-->
+<div class="container1">
+
+<p1>
+    Established in 2024, we are an small team who 
+    dedicate our expertise to the caffeine lovers 
+    with excellent and friendly service. 
+</p1>
+
+</div>
+
 <!--Footer-->
 <footer>
 </footer>
