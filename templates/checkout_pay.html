@@ -50,6 +50,55 @@ footer {
   height:10%;
 }
 
+.payment_img{ 
+  margin-top:2%;
+  margin-left:33%;
+  text-align:center;
+}
+
+
+.cards{
+  margin-top:4%;
+  margin-left:4%;
+}
+
+.rectangle{ 
+  margin-top:2%;
+  margin-left:25%;
+  background-color: lightgrey;
+  width:630px;
+  height:610px;
+}
+
+input[type="name"]{
+    width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px; 
+}
+
+.input1{
+   width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.input2{ 
+    width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
 </style>
 
 <body>
@@ -62,8 +111,46 @@ footer {
   <li><a href="#checkout">Checkout</a></li>
 </ul>
 
-<footer>
+<!--Payment Heading-->
+<img class="payment_img" src="https://i.postimg.cc/Jh11zr8R/payment.jpg" style="width:430px; height:150px"/>
+<br>
+<br>
+<!--Payment Section-->
+<!--Payment Rectangle-->
+      <div class="rectangle">
+        <form action=" " method="POST">
 
+        <!--Card Image-->
+        <img class="cards" src="https://i.postimg.cc/VvHRdLpp/cards.jpg" style="width:100px; height:120px"/>
+        <br>
+        <br>
+
+        <!--Content (Labels + User input [entries])-->
+         <label text-align="center" style="Font-weight:bold">Name on Card</label>
+        <br>
+        <br>
+
+        <!-- Name on card (input container)-->
+        <input class="input" type="name" name="card_name" placeholder="Enter Full Name..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <br>
+        <br>
+
+        
+        <!--Content (Labels + User input [entries])-->
+         <label text-align="center" style="Font-weight:bold;">Card Number</label>
+        <br>
+        <br>
+
+        <!-- Name on card (input container)-->
+        <input class="input1" type="card_no" name="card_no" placeholder="Enter card number..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <br>
+        <br>
+
+    </form>
+    </div>
+
+<!--Footer-->
+<footer>
 </footer>
 
 </body>
