@@ -78,6 +78,7 @@ input[type="name"]{
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px; 
+    text-align:center;
 }
 
 .input1{
@@ -88,22 +89,86 @@ input[type="name"]{
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
+    text-align:center;
 }
 
 .input2{ 
-    width:98%;
+    width:60%;
     padding: 10px;
     margin-bottom: 20px;
     border:1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
+    text-align:center;
 }
+
+.input3{ 
+    width:40%;
+    padding: 10px;
+    margin-bottom: -40px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:center;
+    margin-left:5%;
+}
+
+.input4{ 
+   width:40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:center;
+    margin-left:54%;
+  }
+
+.button1{ 
+    width:60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: orange;
+    font-size: 18px;
+    text-align:center;
+    margin-left:50%;
+}
+
+.text{ 
+  text-align:center;
+}
+
+.cvc_txt{ 
+  margin-left:7%;
+}
+
+.exp_txt{ 
+  margin-top:-13%;
+  margin-left:58%;
+}
+
+input[type="submit"]:hover{
+    background-color: orange;
+    color:white;
+}
+
+input[type="submit"]{
+    background-color:white;
+    color:black;
+    font-weight:bold;
+}
+
 </style>
 
 <body>
  
-<!--Navigation Bar-->
+<!--Navigation Bar (Buttons)-->
 <ul>
   <li><a class="active" href="#home">Home/About</a></li>
   <li><a href="#contact">Contact</a></li>
@@ -126,8 +191,9 @@ input[type="name"]{
         <br>
 
         <!--Content (Labels + User input [entries])-->
-         <label text-align="center" style="Font-weight:bold">Name on Card</label>
-        <br>
+        <div class="text">
+            <label style="Font-weight:bold">Name on Card</label>
+        </div>
         <br>
 
         <!-- Name on card (input container)-->
@@ -137,15 +203,44 @@ input[type="name"]{
 
         
         <!--Content (Labels + User input [entries])-->
-         <label text-align="center" style="Font-weight:bold;">Card Number</label>
-        <br>
+        <div class="text">
+            <label class="text" style="Font-weight:bold;">Card Number</label>
+        </div>
         <br>
 
         <!-- Name on card (input container)-->
         <input class="input1" type="card_no" name="card_no" placeholder="Enter card number..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
         <br>
         <br>
+        
+                <!--Content (Labels + User input [entries])-->
+        <div class="cvc_txt">
+           <label style="Font-weight:bold;">CVC</label>
+        </div>
+        <br>
 
+        <!-- Name on card (input container)-->
+        <input class="input3" type="card_no" name="card_no" placeholder="Enter cvc..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <br>
+        <br>
+        
+        <!--Expiry date Label-->
+        <div class="exp_txt">
+           <label style="Font-weight:bold;">Expriy date</label>
+        </div>
+        <br>
+
+        <!-- Expiry_date (input container)-->
+        <input class="input4" type="card_no" name="card_no" placeholder="Enter exp..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <br>
+        <br>
+        
+        <!--Pay Now (button)-->
+            <!--BUTTON (SUBMIT FORM)--> <!--show pop-up message-->
+            <input type="submit" value="Submit" name="Submit">
+            <h2>Hi2</h2>
+
+        
     </form>
     </div>
 
