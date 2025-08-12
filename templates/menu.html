@@ -106,7 +106,7 @@ footer {
 
 /*Hot chocolate Product card*/
 .card_1 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -140,7 +140,7 @@ footer {
 
 /*Latte Product card*/
 .card_2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -151,7 +151,7 @@ footer {
 
 /*Black coffee Product card */
 .card_3 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -160,15 +160,26 @@ footer {
   margin-left:7%;
 }
 
-
+/*Scones Product card*/
 .card_4{ 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
   margin-top:-28%;
   margin-left:34%;
+}
+
+/*Chocolate Cake Product card*/
+.card_5{ 
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-28%;
+  margin-left:62%;
 }
 
 
@@ -192,10 +203,10 @@ select:focus {
 
 <!--Navigation Bar-->
 <ul>
-  <li><a class="active" href="#Menu">Menu</a></a></li>
-  <li><a href="#contact">Contact Us</a></li>
-  <li><a href="#about">About Us</a></li>
-  <li><a href="#checkout">Checkout</a></li>
+  <li><a class="active" href="/menu">Menu</a></a></li>
+  <li><a href="/checkout">Checkout</a></li>
+  <li><a href="/contact_us">Contact Us</a></li>
+  <li><a href="/">About Us</a></li>
 </ul>
 
 <!--Menu Title-->
@@ -302,6 +313,22 @@ select:focus {
 </div>
 
 <!--product_6-->
+<div class="card_5">
+  <img src="https://i.postimg.cc/mgwvDBDy/chocolate-cake.jpg" alt="" style="width:100%">
+  <h1>Scones</h1>
+  <p class="price">$3.00</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+</div>
 
 <!--product_7-->
 
