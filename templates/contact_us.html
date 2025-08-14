@@ -2,6 +2,8 @@
 <html>
 <title>Conact Us</title>
 <head>
+     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOjWA9bBAgqOgv01L65fKnFWtAvbOzeo0&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
 </head>
 <body>
 
@@ -72,26 +74,24 @@ footer {
     margin-left:8%;
       }
 
-  /*Google Map feature style*/
-
+/*Google map feature*/
   /* Always set the map height explicitly to define the size of the div
   * element that contains the map. */
-  gmp-map {
+  /*Google_map location for cafe(store)*/
+gmp-map {
+    height: 90%;
+    width:90%;
+    margin-top:3%;
+    margin-left:5%;
+  }
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
     height: 100%;
-  }
-
-  /* Optional: Makes the sample page fill the window. */
-  html,
-  body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-  }
-
-  .gmap{
-    margin-top:10%;
-    margin-left:15%;
-  }
+    margin: 0;
+    padding: 0;
+      }
 
   .form1{
     margin-top:-50%;
@@ -202,20 +202,15 @@ input[type="submit"]{
 <!--Google Map-->
   <br>
   <br>
-<div style="background-color: #EEC4B7;width:60%;height:75%; margin-top:-50%;">
-    <h1 style="margin-top:-50%; text-align:center;">Google Map Feature</h1>
+<div style="background-color: #EEC4B7;width:60%;height:90%; margin-top:-50%;">
+    <h1 style="margin-top:-50%; text-align:center;">Location: (project purposes only* for location)</h1>
 
+    <!--Google Map pop-up window-->
+    <gmp-map center="-36.767791748046875,174.52342224121094" zoom="14" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker position="-36.767791748046875,174.52342224121094" title="My location"></gmp-advanced-marker>
+    </gmp-map>
 </div>
 
-  <div class="gmap">
-    <!-- The callback parameter is required, so we use console.debug as a noop -->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOjWA9bBAgqOgv01L65fKnFWtAvbOzeo0&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
-
-    <gmp-map center="-36.76771545410156,174.52342224121094" zoom="14" map-id="DEMO_MAP_ID">
-      <gmp-advanced-marker position="-36.76771545410156,174.52342224121094" title="My location"></gmp-advanced-marker>
-    </gmp-map>
-  </div>
 
 <!--Footer-->
 <footer>
