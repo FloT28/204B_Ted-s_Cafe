@@ -146,6 +146,24 @@ footer {
   border-radius: 7px;
 }
 
+.button{ 
+  width:205px;
+  height:50px;
+  background-color:#4AE52A;
+  margin-top:-230px;
+}
+
+.button1{
+  width: 200px;
+  height:60px;
+  background-color:darkkhaki;
+}
+
+.button1:hover{
+  background-color: orange;
+  transition: duration 3sc;;
+}
+
 </style>
 <body class="backgd">
 
@@ -184,7 +202,11 @@ footer {
     </div>
 
     <div class="rectangle1">
-
+        <!--Alternative option to replace plus/minus buttons-->
+        <!--team decision once approved!-->
+        <label for="quantity1">Quantity (between 1 and 7))</label>
+        <input type="number" id="quantity1" name="quantity" min="1" max="7">
+        <button type="button1">CHANGE</button>
     </div>
 
 </div>
@@ -209,6 +231,7 @@ footer {
 
     <div class="details2">
     </div>
+  
 
   </div>
 </div>
