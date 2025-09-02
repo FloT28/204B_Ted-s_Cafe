@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<title>Conact Us</title>
+<head>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOjWA9bBAgqOgv01L65fKnFWtAvbOzeo0&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  
+<style>
+  /*unordered list*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D4B5A0;
+}
+
+/*list items to float to right of navigation bar*/
+li {
+  float: right;
+}
+
+/*navigation buttons*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+/*navigation button hover*/
+li a:hover {
+  width:100px;
+  background-color: #D97D44;
+}
+
+/* footer Style*/
+footer {
+  background-image:url('https://i.postimg.cc/L8vPWWNX/footer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 99%;
+  height:4%;
+}
+
+/*cover + title image style*/
+.Images {
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+      
+.cover {
+    position: relative;
+    top: 0;
+    left: 0;
+      }
+    
+.title {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    opacity:95%;
+    margin-left:8%;
+      }
+
+/*Google map feature*/
+  /* Always set the map height explicitly to define the size of the div
+  * element that contains the map. */
+  /*Google_map location for cafe(store)*/
+gmp-map {
+    height: 90%;
+    width:90%;
+    margin-top:-2%;
+    margin-left:5%;
+  }
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+      }
+
+  .form1{
+    margin-top:-50%;
+    margin-left:-30%;
+    text-align: right;
+    background-color:#D9D9D9;
+    width:100%;
+    height:100%;
+  }
+
+  
+input[type="submit"]:hover{
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    width:70%;
+    padding: 10px;
+    background-color:white;
+    color:black;
+    border:none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left:1%;
+    margin-top:-11%;
+}
+
+/*Contact us form (Name field)*/
+.Name{
+    width:50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:left;
+}
+
+/*Contact us form (message) field)*/
+.Message{
+    width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:left;
+}
+
+/*Contact us form (Title))*/
+.cont_title{ 
+  font-size: 45px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-left:15px;
+}
+
+/*subject of message drop down container*/
+.subject{
+    width:60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:left;
+}
+
+/*message box container*/
+.text_area{
+    width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align:left;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/*Background for map location*/
+.map_backgrd{
+  background-color: #EEC4B7;
+  width:60%;
+  height:90%; 
+  margin-top:-50%;
+  border-radius:8px;
+}
+
+</style>
+
+<!--Navigation Bar-->
+<ul>
+  <li><a href="/checkout">Checkout</a></li> 
+  <li><a href="/menu">Menu</a></li>
+  <li><a href="/">About Us</a></li>
+  <li><a class="active" href="/contact_us">Contact Us</a></li>
+</ul>
+
+<!--Contact Us cover/title-->
+<!--Cover/Title Images-->
+<div class="Images">
+    <img class="cover" src="https://i.postimg.cc/XqyhHdWj/cover2.jpg" style="width:1344px; height:180px" />
+    <img class="title" src="https://i.postimg.cc/66L14zY0/Contact-Us.jpg" style="width:550px; height:150px"/>
+</div>
+
+
+<!--contact-us form-->
+<div style="background-color: #D9D9D9; width:100%; height:100%;">
+    <form style=" margin-left:65%;" method="POST">
+        
+        <!--Title: Any Questions-->
+        <h1 class="cont_title">Contact Us</h1>
+
+        <!-- Name (input container)-->
+        <input class="Name" class="input" type="name" name="name" placeholder="Name" value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <br>
+
+        <br>
+        
+        <!--Subject of Message (drop_down options)-->
+        <select class="subject" name="options" id="op">
+          <option value="op">Subject of message:</option>
+          <option value="op1">General Question/Enquiry</option>
+          <option value="op1">Feedback</option>
+          <option value="op3">Customer Support</option>
+          <option value="op4">Other</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!--Message input-->
+        <textarea class="text_area" style="width:90%; height:90%;" name="Message_option" placeholder="Message" style="font-family:'Times New Roman', Times, serif"  required ></textarea>
+        <br>
+        <br>
+
+        <!--submit button-->
+        <input type="submit" value="Submit" name="Submit">
+       </form>
+</div>
+
+<!--Google Map API - used to show location of cafe-->
+  <br>
+  <br>
+<div class="map_backgrd">
+    <h1 style="margin-top:-50%; text-align:center;">Location:609 state highway 16, Kumeu </h1>
+
+    <!--Google Map pop-up window (container)-->
+    <gmp-map center="-36.767791748046875,174.52342224121094" zoom="14" map-id="DEMO_MAP_ID">
+      <!--Google map location marker position-->
+      <gmp-advanced-marker position="-36.767791748046875,174.52342224121094" title="609 State Highway 16, Kumeu"></gmp-advanced-marker>
+    </gmp-map>
+</div>
+
+
+<!--Footer-->
+<footer>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<title>Checkout</title>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<style>
+  /*unordered list*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D4B5A0;
+}
+
+/*list items to float to right of navigation bar*/
+li {
+  float: right;
+}
+
+/*navigation buttons*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+/*navigation button hover*/
+li a:hover {
+  width:100px;
+  background-color: #D97D44;
+}
+
+/* footer Style*/
+footer {
+  background-image:url('https://i.postimg.cc/L8vPWWNX/footer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 10px;  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 99%;
+  height:4%;
+}
+
+.rectangle{ 
+  background-color: #B9B3B3;
+  width:500px;
+  height:70px;
+  border-radius:8px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:50px;
+  color:black;
+  margin-left:33%;
+  margin-top:2%;
+  text-align: center;
+}
+
+.backgd{
+  background-color: #D9D9D9;
+}
+
+.checkout_con{ 
+ width:1300px;
+ height:700px; 
+ background: white;
+ border-color: black;
+ border-radius:3px;
+ border-width: 4px;
+ margin-left:29px;
+}
+
+.checkout_con1{ 
+  width:1250px; 
+  height:220px;
+  background-color: #B9B3B3;
+  margin-left:39px;
+  margin-top:10px;
+  border-radius: 6px;
+}
+
+.checkout_con2{ 
+  width:1250px; 
+  height:220px;
+  background-color: #B9B3B3;
+  margin-left:39px;
+  margin-top:10px;
+  border-radius: 6px;
+}
+
+.image{ 
+  width:290px;
+  height:200px;
+  border-radius:4px;
+  margin-left:50px;
+  margin-top:-140px;
+  margin-bottom:3px;
+  background-color: grey;
+}
+
+.image2{ 
+  width:290px;
+  height:200px;
+  border-radius:4px;
+  margin-left:50px;
+  margin-top:-135px;
+  margin-bottom:3px;
+  background-color: grey;
+}
+
+.details{
+  width:400px;
+  height:190px;
+  background-color:gray;
+  border-radius:7px;
+  margin-top:-200px;
+  margin-left:390px;
+}
+
+.details2{
+  width:400px;
+  height:190px;
+  background-color:gray;
+  border-radius:7px;
+  margin-top:-197px;
+  margin-left:390px;
+}
+
+/*Quantity background-rectangle*/
+.rectangle1{
+  background-color:gray;
+  width:190px;
+  height:70px;
+  margin-top:-140px;
+  margin-left:860px;
+  border-radius: 7px;
+}
+
+.rectangle2{
+  background-color:gray;
+  width:190px;
+  height:70px;
+  margin-top:-110px;
+  margin-left:860px;
+  border-radius:7px;
+}
+
+.button{ 
+  width:205px;
+  height:50px;
+  background-color:#4AE52A;
+  margin-top:-230px;
+}
+
+.button1{
+  width: 200px;
+  height:60px;
+  background-color:darkkhaki;
+}
+
+.button1:hover{
+  background-color: orange;
+  transition: duration 3sc;;
+}
+
+</style>
+<body class="backgd">
+
+  <!--To - Do -->
+  <!--Complete quantity template-->
+  
+<!--Navigation Bar-->
+<ul>
+  <li><a class="active" href="/checkout">Checkout</a></li>
+  <li><a href="/contact_us">Contact</a></li>
+  <li><a href="/menu">Menu</a></li>
+  <li><a href="/">About Us</a></li>
+</ul>
+
+<!--Checkout Title-->
+<h1 class="rectangle">Checkout</h1>
+
+<!--Checkout container-->
+<div class="checkout_con">
+  <br>
+  <!--individual containers for checkout features-->
+  <div class="checkout_con1">
+
+    <div class="container">
+      <button type=button style="margin-top:75px; margin-left:1100px;">
+        <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:70px; height:70px;">
+      </button>
+    </div>
+
+    <div class="image">
+
+    </div>
+
+    <div class="details">
+
+    </div>
+
+    <div class="rectangle1">
+        <!--Alternative option to replace plus/minus buttons-->
+        <!--team decision once approved!-->
+        <label for="quantity1">Quantity (between 1 and 7))</label>
+        <input type="number" id="quantity1" name="quantity" min="1" max="7">
+        <button type="button1">CHANGE</button>
+    </div>
+
+</div>
+
+
+  <br>
+  <br>
+  <br>
+
+  <!--Container_2-->
+  <div class="checkout_con2">
+
+
+        <div class="container">
+      <button type=button style="margin-top:65px; margin-left:1100px;">
+        <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:70px; height:70px;">
+      </button>
+    </div>
+
+    <div class="image2">
+    </div>
+
+    <div class="details2">
+    </div>
+  
+      <div class="rectangle2">
+        <!--Alternative option to replace plus/minus buttons-->
+        <!--team decision once approved!-->
+        <label for="quantity1">Quantity (between 1 and 7))</label>
+        <input type="number" id="quantity1" name="quantity" min="1" max="7">
+        <button type="button1">CHANGE</button>
+    </div>
+
+  </div>
+</div>
+
+
+    
+<!--Footer-->
+<footer>
+</footer>
+
+</body>
+</html>
