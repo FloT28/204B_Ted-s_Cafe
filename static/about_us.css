@@ -1,0 +1,123 @@
+/* Responsive cover image */
+.cover {
+  width: 1330px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* About Us subtitle image */
+.sub_title {
+  width: 520px;
+  height: 100px;
+  object-fit: contain;
+  margin-left: 50%;
+  margin-top: 2%;
+}
+
+/* About Us main image */
+.about_image {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  position: absolute;
+  margin-top: -8%;
+  margin-left: 10%;
+}
+/*unordered list*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D4B5A0;
+}
+
+/*list items to float to right of navigation bar*/
+li {
+  float: right;
+}
+
+/*navigation buttons*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+/*navigation button hover*/
+li a:hover {
+  width: 100px;
+  background-color: #D97D44;
+}
+
+/* footer Style*/
+footer {
+  background-image:url('https://i.postimg.cc/L8vPWWNX/footer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 99%;
+  height:4%;
+}
+
+/*cover + title image style*/
+.Images {
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+      
+.cover {
+    position: relative;
+    top: 0;
+    left: 0;
+      }
+    
+.title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    opacity:90%;
+      }
+
+.container1 {
+  width: 510px;
+  height:130px;
+  right:50px;
+  background-color:rgb(214, 211, 211);
+  border-radius:6%;
+  text-align:center;
+  margin-left:50%;
+  margin-top :3%;
+  font-size:25px;
+}
+
+.p1{
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*about_us image style*/
+.about_us {
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+
+.about_image{
+    position:absolute;
+    margin-top: -8%;
+    margin-left:10%;
+}
+
+/*about_us subtitle*/
+.sub_title{
+  margin-left:50%;
+  margin-top:2%;
+}
