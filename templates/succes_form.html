@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<title>Conact Us</title>
+<head>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOjWA9bBAgqOgv01L65fKnFWtAvbOzeo0&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+        
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  
+<style>
+  /*unordered list*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D4B5A0;
+}
+
+/*list items to float to right of navigation bar*/
+li {
+  float: right;
+}
+
+/*navigation buttons*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+/*navigation button hover*/
+li a:hover {
+  width:100px;
+  background-color: #D97D44;
+}
+
+/* footer Style*/
+footer {
+  background-image:url('https://i.postimg.cc/L8vPWWNX/footer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 97%;
+  height:10%;
+}
+
+/*cover + title image style*/
+.Images {
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+      
+.cover {
+    position: relative;
+    top: 0;
+    left: 0;
+      }
+    
+.title {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    opacity:95%;
+    margin-left:8%;
+      }
+
+/*Google map feature*/
+  /* Always set the map height explicitly to define the size of the div
+  * element that contains the map. */
+  /*Google_map location for cafe(store)*/
+gmp-map {
+    height: 90%;
+    width:90%;
+    margin-top:3%;
+    margin-left:5%;
+  }
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+      }
+
+  .form1{
+    margin-top:-50%;
+    margin-left:-30%;
+    text-align: right;
+    background-color:#D9D9D9;
+    width:100%;
+    height:100%;
+  }
+
+  
+input[type="submit"]:hover{
+    background-color: orange;
+    color:white;
+}
+
+input[type="submit"]{
+    width:70%;
+    padding: 10px;
+    background-color:white;
+    color:black;
+    border:none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left:-8%;
+    margin-top:-12%;
+}
+
+/*Contact us form (Name field)*/
+.Name{
+    width:50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:left;
+}
+
+/*Contact us form (message) field)*/
+.Message{
+    width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:left;
+}
+
+/*Contact us form (Title))*/
+.cont_title{ 
+  font-size: 45px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/*subject of message drop down container*/
+.subject{
+    width:60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:left;
+}
+
+/*message box container*/
+.text_area{
+    width:98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align:left;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/*Background for map location*/
+.map_backgrd{
+  background-color: #EEC4B7;
+  width:60%;
+  height:90%; 
+  margin-top:-50%;
+  border-radius:8px;
+}
+
+h1{
+  color:#88B04B;
+  font-family:"Nunito Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800px;
+  font-size: 50px;
+  margin-top:40px;
+  margin-left:530px;
+}
+
+</style>
+
+<!--Navigation Bar-->
+<ul>
+  <li><a href="/checkout">Checkout</a></li> 
+  <li><a href="/menu">Menu</a></li>
+  <li><a href="/menucopy">Menu(copy)</a></li>
+  <li><a href="/">About Us</a></li>
+  <li><a class="active" href="/contact_us">Contact Us</a></li>
+</ul>
+
+<!--Image payment successful-->
+<img src="https://i.postimg.cc/KcVNkp86/green-check-mark-icon-in-a-circle-free-vector.jpg" style="margin-left:650px; margin-top:10px; width:180px; height:180px;">
+
+<!--Success Title-->
+<h1>Succesful payment</h1>
+
+<!--Success confirmation-->
+<h2 style="margin-left:600px;">Thank you for your purchase!</h2>
+
+<!--add personalized message including username, name-->
+
+<!--Footer-->
+<footer>
+</footer>
+
+</body>
+</html>

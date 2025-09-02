@@ -1,26 +1,399 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Menu</title>
 <head>
-    <meta charset="UTF-8">
-    <title>Ted's Cafe Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="static\styles.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header class="header-flex">
-        <h1 class="title">Ted's Cafe Menu</h1>
-        <nav class="navbar">
-            <a href="#" class="nav-box">Home</a>
-            <a href="#" class="nav-box">Contact Us</a>
-            <a href="#" class="nav-box">Menu</a>
-            <a href="#" class="nav-box">Checkout</a>
-        </nav>
-    </header>
-    <main>
-    <img src="/assets/banner.png" class="center-logo" /> <!-- Doesn't currently work -->
-    </main>
-    <footer>
-        <p>&copy; 2025 Ted's Cafe</p>
-    </footer>
+  
+<style>
+/*unordered list*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D4B5A0;
+}
+
+/*list items to float to right of navigation bar*/
+li {
+  float: right;
+}
+
+/*navigation buttons*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+/*navigation button hover*/
+li a:hover {
+  width:100px;
+  background-color: #D97D44;
+}
+/* footer Style*/
+footer {
+  background-image:url('https://i.postimg.cc/L8vPWWNX/footer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 99%;
+  height:4%;
+}
+
+.menu_con{
+  width:1300px;
+  height:1000px;
+  background-color: white;
+  border-color:black;
+  border:3px;
+  border-radius: 4px;
+  margin-left:1%;
+  margin-top:5%;
+}
+
+.menu_title{ 
+  width:840px;
+  height:110px;
+  margin-top:2%;
+}
+
+.bg{
+  background-color: #D9D9D9;
+}
+
+/*Flat White Product card*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-72%;
+  margin-left:3%;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-image:url('https://i.postimg.cc/PrVpnNvn/cart.jpg');
+  background-position: right 35% top 40%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 100%;
+  height:90%;
+}
+
+.card button:hover {
+  opacity: 0.7;
+  background-image:url('https://i.postimg.cc/63Zgt7pj/cart3.jpg');
+}
+
+/*Latte Product card*/
+.card_1 {
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-29%;
+  margin-left:28%;
+}
+
+.price_1 {
+  color: grey;
+  font-size: 22px;
+}
+
+.button_1 {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-image:url('https://i.postimg.cc/PrVpnNvn/cart.jpg');
+  background-position: right 35% top 40%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 100%;
+  height:100%;
+}
+
+.button_1:hover {
+  opacity: 0.7;
+  background-image:url('https://i.postimg.cc/63Zgt7pj/cart3.jpg');
+}
+
+/*Hot Chocolate Product card*/
+.card_2 {
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-29%;
+  margin-left:52%;
+}
+
+/*Black coffee Product card */
+.card_3 {
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-29%;
+  margin-left:76%;
+}
+
+/*Scones Product card*/
+.card_4{ 
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:6%;
+  margin-left:3%;
+}
+
+/*Chocolate Cake Product card*/
+.card_5{ 
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-28%;
+  margin-left:28%;
+}
+
+/*Caramel slice Product card*/
+.card_6{ 
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-28%;
+  margin-left:53%;
+}
+
+/*Poached Egg + Toast Product card*/
+.card_7{ 
+  box-shadow: 0 4px 8px 0 #B6B6B6(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top:-27%;
+  margin-left:76%;
+}
+
+
+select {
+  border: 2px solid #ddd;
+  background: #eee;
+  padding: 10px;
+  transition: 0.4s;
+  margin-top:-20%;
+  margin-left:5%;
+}
+
+select:hover,
+select:focus {
+  background: #ddd;
+}
+
+</style>
+
+<body class="bg">
+
+<!--Navigation Bar-->
+<ul>
+  <li><a class="active" href="/menu">Menu</a></a></li>
+  <li><a href="/checkout">Checkout</a></li>
+  <li><a href="/contact_us">Contact Us</a></li>
+  <li><a href="/">About Us</a></li>
+</ul>
+
+<!--Menu Title-->
+<div class="bg">
+  <img class="menu_title" src="https://i.postimg.cc/mgPXhhR4/menu-title.jpg"/>
+</div>
+
+<!--Menu Container (background)-->
+<div class="menu_con"></div>
+
+<!--Men Products 1-8 -->
+
+<!--product_1-->
+<div class="card">
+  <img src="https://i.postimg.cc/FFYNBdR5/flat-white.jpg" alt="" style="width:100%">
+  <h1>Flat White</h1>
+  <p class="price">$5.00</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button></button></p>
+</div>
+
+<!--product_2-->
+<div class="card_1">
+  <img src="https://i.postimg.cc/4NtZXDVW/latte.jpg" alt="" style="width:100%">
+  <h1>Latte</h1>
+  <p class="price">$5.00</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+
+</div>
+
+<!--product_3-->
+<div class="card_2">
+  <img src="https://i.postimg.cc/mgs4kmSB/hot-chocolate.jpg" alt="" style="width:100%">
+  <h1>Hot Chocolate</h1>
+  <p class="price">$4.50</p>
+  
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+
+</div>
+
+<!--product_4-->
+<div class="card_3">
+  <img src="https://i.postimg.cc/YCzHWQXg/black-coffee.jpg " alt="" style="width:100%">
+  <h1>Black coffee</h1>
+  <p class="price">$2.50</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+</div>
+
+<!--product_5-->
+<div class="card_4">
+  <img src="https://i.postimg.cc/BvndPkP9/scones.jpg" alt="" style="width:100%">
+  <h1>Scones</h1>
+  <p class="price">$6.50 for 2!</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+</div>
+
+<!--product_6-->
+<div class="card_5">
+  <img src="https://i.postimg.cc/mgwvDBDy/chocolate-cake.jpg" alt="" style="width:100%">
+  <h1>Chocolate Cake</h1>
+  <p class="price">$3.00</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+</div>
+
+<!--product_7-->
+<div class="card_6">
+  <img src="https://i.postimg.cc/ZR2tSHRk/caramel-slice.jpg" alt="" style="width:100%">
+  <h1>Caramel Slice</h1>
+  <p class="price">$4.50</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+</div>
+
+<!--product_8-->
+<div class="card_7">
+  <img src="https://i.postimg.cc/SKQp7j5P/poached-egg-toast.jpg" alt="" style="width:85%; height:50%;">
+  <h1>Poached Egg + Toast</h1>
+  <p class="price">$4.50</p>
+  <label for="Quantity">Quantity:</label>
+
+<select name="Quantity" id="qty">
+  <option value="qty1">1</option>
+  <option value="qty2">2</option>
+  <option value="qty3">3</option>
+  <option value="qty4">4</option>
+  <option value="qty4">5</option>
+</select>
+
+  <p><button class="button_1"></button></p>
+</div>
+
+
+<!--Footer-->
+<footer>
+</footer>
+
 </body>
 </html>
