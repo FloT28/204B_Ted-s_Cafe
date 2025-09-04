@@ -8,8 +8,6 @@
 </head>
 <body>
 
-<body class="bg">
-
 <!--Navigation Bar-->
 <ul>
   <li><a href="/contact_us">Contact Us</a></li>
@@ -24,37 +22,30 @@
 </div>
 
 <!--Menu Container (background)-->
-<div class="menu_con"></div>
+<div class="menu_con">
+  {% for key,value in item.items() %}
+    <div class="card">
+      <img class="card_img" src="https://i.postimg.cc/FFYNBdR5/flat-white.jpg" alt=""> <!-- parse image from DB-->
+      <h1>{{ key }}</h1>
+      <p class="price">{{ value,}}</p> <!-- parse price from DB, maybe string since there appears to be a small formatting error-->
+      <label for="Quantity">Quantity:</label> <!-- parse quantity to checkout, store via cookie maybe or via postgres($$$)-->
 
-<!--Men Products 1-8 -->
-
-{% for key,value in item.items() %}
-  <div class="card">
-    <img class="card_img" src="https://i.postimg.cc/FFYNBdR5/flat-white.jpg" alt="">
-    <h1>{{ key }}</h1>
-    <p class="price">{{ value, "0" }}</p>
-    <label for="Quantity">Quantity:</label> <!-- parse quantity to checkout, store via cookie maybe or via postgres($$$)-->
-
-  <select name="Quantity" id="qty">
-    <option value="qty1">1</option>
-    <option value="qty2">2</option>
-    <option value="qty3">3</option>
-    <option value="qty4">4</option>
-    <option value="qty5">5</option>
-    <option value="qty6">6</option>
-    <option value="qty7">7</option>
-    <option value="qty8">8</option>
-    <option value="qty9">9</option>
-    <option value="qty10">10+</option> <!-- maybe add an editable box for addional when 10+-->
-
-
-  </select>
-
-    <p><button></button></p>
-  </div>
-{% endfor %}
-
-
+    <select name="Quantity" id="qty">
+      <option value="qty1">1</option>
+      <option value="qty2">2</option>
+      <option value="qty3">3</option>
+      <option value="qty4">4</option>
+      <option value="qty5">5</option>
+      <option value="qty6">6</option>
+      <option value="qty7">7</option>
+      <option value="qty8">8</option>
+      <option value="qty9">9</option>
+      <option value="qty10">10+</option> <!-- maybe add an editable box for addional when 10+-->
+    </select>
+      <p><button></button></p>
+    </div>
+  {% endfor %}
+</div>
 <!-- product_1
 
 
@@ -188,9 +179,10 @@
 </div> -->
 
 
+
+</body>
 <!--Footer-->
 <footer>
 </footer>
 
-</body>
 </html>

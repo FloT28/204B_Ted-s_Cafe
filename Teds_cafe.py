@@ -4,9 +4,8 @@ import os
 app = Flask(__name__)
 
 items = [1,2,3,4,5,6,7,8]
-poo = {
-    'item1': 4.00,
-    'item2': 3.00
+DB_ITEMS = {
+    'item1': 3.80,
 }
 @app.route('/')
 def home(): 
@@ -18,7 +17,7 @@ def contact():
 
 @app.route('/menu')
 def menu(): 
-    return render_template('menu.html', item=poo) #"""DB_items""" parse here
+    return render_template('menu.html', item=DB_ITEMS) #"""DB_items""" parse here
 
 @app.route('/checkout_pay')
 def checkout(): 
