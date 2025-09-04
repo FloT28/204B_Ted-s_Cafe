@@ -10,7 +10,7 @@ poo = {
 }
 @app.route('/')
 def home(): 
-    return render_template('menu.html')
+    return redirect(url_for('menu'))
 
 @app.route('/contact_us')
 def contact(): 
