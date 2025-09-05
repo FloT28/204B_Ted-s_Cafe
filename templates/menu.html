@@ -18,169 +18,39 @@
 
 <!--Menu Title-->
 <div class="bg">
-  <img class="menu_title" src="https://i.postimg.cc/mgPXhhR4/menu-title.jpg"/>
+  <img class="menu_title" src="https://i.postimg.cc/mgPXhhR4/menu-title.jpg"/> <!-- unhardcode this later, parse from teds_cafe.py? -->
 </div>
 
 <!--Menu Container (background)-->
 <div class="menu_con">
-  {% for key,value in item.items() %}
-    <div class="card">
-      <img class="card_img" src="https://i.postimg.cc/FFYNBdR5/flat-white.jpg" alt=""> <!-- parse image from DB-->
-      <h1>{{ key }}</h1>
-      <p class="price">{{ value,}}</p> <!-- parse price from DB, maybe string since there appears to be a small formatting error-->
-      <label for="Quantity">Quantity:</label> <!-- parse quantity to checkout, store via cookie maybe or via postgres($$$)-->
-
-    <select name="Quantity" id="qty">
-      <option value="qty1">1</option>
-      <option value="qty2">2</option>
-      <option value="qty3">3</option>
-      <option value="qty4">4</option>
-      <option value="qty5">5</option>
-      <option value="qty6">6</option>
-      <option value="qty7">7</option>
-      <option value="qty8">8</option>
-      <option value="qty9">9</option>
-      <option value="qty10">10+</option> <!-- maybe add an editable box for addional when 10+-->
-    </select>
+  {% for item in items %} <!-- Loop through each dictionary in the items list -->
+    <div class="card"> <!-- New card for each menu item (each dict, new card.) -->
+      <img class="card_img" src="{{ item['image'] }}" alt=""> <!-- Access the image URL from the dictionary -->
+      
+  <h1 class="card_name">{{ item['name'] }}</h1> <!-- name -->
+  <p class="price">${{ item['price'] }}</p> <!-- price -->
+      
+      <!-- Quantity Dropdown -->
+      <label for="Quantity">Quantity:</label> 
+      <select name="Quantity" id="qty"> 
+        <option value="qty1">1</option>
+        <option value="qty2">2</option>
+        <option value="qty3">3</option>
+        <option value="qty4">4</option>
+        <option value="qty5">5</option>
+        <option value="qty6">6</option>
+        <option value="qty7">7</option>
+        <option value="qty8">8</option>
+        <option value="qty9">9</option>
+        <option value="qty10">10</option> <!-- max 10, maybe more later? -->
+      </select>
       <p><button></button></p>
     </div>
   {% endfor %}
 </div>
-<!-- product_1
-
-
-
-<div class="card_1">
-  <img src="https://i.postimg.cc/4NtZXDVW/latte.jpg" alt="" style="width:100%">
-  <h1>Latte</h1>
-  <p class="price">$5.00</p>
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-
-</div>
-
-
-<div class="card_2">
-  <img src="https://i.postimg.cc/mgs4kmSB/hot-chocolate.jpg" alt="" style="width:100%">
-  <h1>Hot Chocolate</h1>
-  <p class="price">$4.50</p>
-  
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-
-</div>
-
-
-<div class="card_3">
-  <img src="https://i.postimg.cc/YCzHWQXg/black-coffee.jpg " alt="" style="width:100%">
-  <h1>Black coffee</h1>
-  <p class="price">$2.50</p>
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-</div>
-
-
-<div class="card_4">
-  <img src="https://i.postimg.cc/BvndPkP9/scones.jpg" alt="" style="width:100%">
-  <h1>Scones</h1>
-  <p class="price">$6.50 for 2!</p>
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-</div>
-
-
-<div class="card_5">
-  <img src="https://i.postimg.cc/mgwvDBDy/chocolate-cake.jpg" alt="" style="width:100%">
-  <h1>Chocolate Cake</h1>
-  <p class="price">$3.00</p>
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-</div>
-
-
-<div class="card_6">
-  <img src="https://i.postimg.cc/ZR2tSHRk/caramel-slice.jpg" alt="" style="width:100%">
-  <h1>Caramel Slice</h1>
-  <p class="price">$4.50</p>
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-</div>
-
-
-<div class="card_7">
-  <img src="https://i.postimg.cc/SKQp7j5P/poached-egg-toast.jpg" alt="" style="width:85%; height:50%;">
-  <h1>Poached Egg + Toast</h1>
-  <p class="price">$4.50</p>
-  <label for="Quantity">Quantity:</label>
-
-<select name="Quantity" id="qty">
-  <option value="qty1">1</option>
-  <option value="qty2">2</option>
-  <option value="qty3">3</option>
-  <option value="qty4">4</option>
-  <option value="qty4">5</option>
-</select>
-
-  <p><button class="button_1"></button></p>
-</div> -->
-
-
-
 </body>
+
+
 <!--Footer-->
 <footer>
 </footer>
