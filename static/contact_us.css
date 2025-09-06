@@ -1,14 +1,14 @@
 /* Contact form container */
 .container {
-  position: static;
-  overflow: hidden;
-  background-color: #D9D9D9;
-  width: 100%;
-  min-height: 600px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between; 
+  align-items: flex-start; /* align items to top */
+  flex-wrap: wrap;
+  padding: 4.6% 0.5%;
+  min-height: 75%;
+  background-color: rgb(214, 211, 211);
+  box-sizing: border-box;
+  position: relative;
 }
 
 /* Contact form styling */
@@ -33,6 +33,16 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #D4B5A0;
+}
+
+li {
+  float: right;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*list items to float to right of navigation bar*/
@@ -70,7 +80,6 @@ footer {
   height: 4%;
 }
 
-/*cover + title image style*/
 /* Cover/title flex container */
 .cover-title-container {
   display: flex;
@@ -78,16 +87,15 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 220px;
+  min-height: 2%;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 0%;
 }
 
 .cover {
   width: 100%;
   max-height: 220px;
   object-fit: cover;
-  border-radius: 12px;
 }
 
 .title {
@@ -104,7 +112,7 @@ footer {
 
 /*Google map*/
 .map {
-  display: absolute;
+  position: relative;
   margin-bottom: 1%;
   border: 2px solid black;
   border-radius: 8px;
@@ -224,3 +232,4 @@ input[type="submit"]{
   align-items: center;
   box-sizing: border-box;
 }
+

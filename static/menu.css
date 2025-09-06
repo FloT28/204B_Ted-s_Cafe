@@ -1,4 +1,9 @@
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /*Navbar*/
 ul {
   list-style-type: none;
@@ -29,8 +34,6 @@ li a:hover {
   background-color: #D97D44;
 }
 
-
-
 .menu_con{
   display: flex;
   flex-wrap: wrap;
@@ -40,7 +43,7 @@ li a:hover {
   background-color: white;
   border-color:black;
   align-items: flex-start; /* removes bottom of card whitespace */
-
+  margin-bottom: 3%;
 }
 
 .menu_title{ 
