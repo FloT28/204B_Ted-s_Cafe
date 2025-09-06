@@ -31,12 +31,12 @@ li a:hover {
 
 /* footer Style*/
 footer {
-  background-image: url('https://i.postimg.cc/L8vPWWNX/footer.jpg');
+  background-image: url('https://i.postimg.cc/NMhtpQQz/footer2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1%;
-  position: relative;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 99%;
