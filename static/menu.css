@@ -8,6 +8,13 @@ ul {
   background-color: #D4B5A0;
 }
 
+/*Logo*/
+.Logo{
+  width: 70px;
+  height: 70px;
+  margin-left:30px;
+}
+
 /*list items to float to right of navigation bar*/
 li {
   float: right;

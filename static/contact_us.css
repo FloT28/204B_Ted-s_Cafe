@@ -11,6 +11,13 @@
   justify-content: center;
 }
 
+/*Logo*/
+.Logo{
+  width: 70px;
+  height: 70px;
+  margin-left:30px;
+}
+
 /* Contact form styling */
 .contact-form {
   margin-left: 0;
