@@ -29,7 +29,8 @@
             <form method="POST" action="/remove_from_cart">
                 <input type="hidden" name="item_id" value="{{ item['id'] }}">
                 <button type="submit">
-                    <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:70px; height:70px;">
+            <!-- as a rule i avoid putting style elements into elements, but this is simply to force the corrct image resolution-->
+                    <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:41px; height:50px; margin-right:30px;"> 
                 </button>
             </form>
         </div>
@@ -70,6 +71,12 @@
     <div class="total">
         <h3>Total: ${{ "%.2f"|format(total) }}</h3>
     </div>
+    <div class="checkout_pay_btn">
+    <form method="GET" action="/checkout_pay">
+        <input type="hidden" name="total" value="{{ total }}">
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</div>
 </div>
 
 <!-- Footer -->

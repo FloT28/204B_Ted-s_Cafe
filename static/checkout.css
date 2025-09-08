@@ -151,6 +151,26 @@ li a:hover {
   font-weight: bold;
 }
 
+/* Proceed to payment button */
+.checkout_pay_btn {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout_pay_btn button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout_pay_btn button:hover {
+    background-color: darkorange;
+}
+
 /* Footer */
 footer {
   background-image: url('https://i.postimg.cc/L8vPWWNX/footer.jpg');

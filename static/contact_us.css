@@ -240,3 +240,12 @@ input[type="submit"]{
   box-sizing: border-box;
 }
 
+/* Phone number styling, centered below the contact us block*/
+.Phone-number {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+  margin-top: 10px;
+}
+

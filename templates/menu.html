@@ -2,65 +2,64 @@
 <html>
 <title>Menu</title>
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/menu.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/menu.css">
 </head>
 <body>
 
-<!--Navigation Bar-->
+<!-- Comments would be removed in a production product, but is not necessary for the sake of this project.-->
+
+
+
+<!-- Navigation Bar -->
 <ul>
-  <img class="Logo" src="https://i.postimg.cc/R0tyC8tr/204-B-Logo-removebg-preview.png" alt="Logo">
-  <li><a href="/contact_us">Contact Us</a></li>
-  <li><a href="/about_us">About Us</a></li>
-  <li><a href="/checkout">Checkout</a></li>
-  <li><a class="active" href="/menu">Menu</a></a></li>
+    <img class="Logo" src="https://i.postimg.cc/R0tyC8tr/204-B-Logo-removebg-preview.png" alt="Logo">
+    <li><a href="/contact_us">Contact Us</a></li>
+    <li><a href="/about_us">About Us</a></li>
+    <li><a href="/checkout">Checkout</a></li>
+    <li><a class="active" href="/menu">Menu</a></li>
 </ul>
 
-
-
-<!-- hidden iframe, this is the post request reciever -->
+<!-- hidden iframe, this is the post request receiver -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-
-<!--Menu Title-->
+<!-- Menu Title -->
 <div class="bg">
-  <img class="menu_title" src="https://i.postimg.cc/mgPXhhR4/menu-title.jpg"/> <!-- unhardcode this later, parse from teds_cafe.py? -->
+    <img class="menu_title" src="https://i.postimg.cc/mgPXhhR4/menu-title.jpg"/>
 </div>
 
-<!--Menu Container (background)-->
+<!-- Menu Container -->
 <div class="menu_con">
-  {% for item in items %} <!-- Loop through each dictionary in the items list -->
-<div class="card">
-  <img class="card_img" src="{{ item['image'] }}" alt="">
-  <h1 class="card_name">{{ item['name'] }}</h1>
-  <p class="price">${{ item['price'] }}</p>
+    {% for item in items %}
+    <div class="card">
+        <img class="card_img" src="{{ item['image'] }}" alt="">
+        <h1 class="card_name">{{ item['name'] }}</h1>
+        <p class="price">${{ item['price'] }}</p>
 
-  <form method="POST" action="/add_to_cart" target="hidden_iframe">
-    <input type="hidden" name="item_id" value="{{ item['id'] }}">
-    <label for="qty">Quantity:</label>
-    <select name="qty" id="qty">
-      {% for i in range(1, 11) %}
-        <option value="{{ i }}">{{ i }}</option>
-      {% endfor %}
-    </select>
-    <button type="submit"></button>
-  </form>
-</div>
-  {% endfor %}
+        <form method="POST" action="/add_to_cart" target="hidden_iframe">
+            <input type="hidden" name="item_id" value="{{ item['id'] }}">
+            <label for="qty">Quantity:</label>
+            <select name="qty" id="qty">
+                {% for i in range(1, 11) %}
+                <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit"></button>
+        </form>
+    </div>
+    {% endfor %}
 </div>
 
 <div class="show_cart">
-
-  <a href="/checkout">
-    <p>View Cart ({{ session.get('cart') | length if session.get('cart') else 0 }})</p>
+    <a href="/checkout">
+        <p>View Cart ({{ session.get('cart') | length if session.get('cart') else 0 }})</p>
+    </a>
 </div>
 
-</body>
-
-
-<!--Footer-->
+<!-- Footer -->
 <footer>
 </footer>
 
+</body>
 </html>
