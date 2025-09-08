@@ -19,7 +19,7 @@ DB_ITEMS = [
     {'id': '6', 'image': 'https://i.postimg.cc/mgwvDBDy/chocolate-cake.jpg', 'name': 'Chocolate Cake', 'price': '4.50'},
     {'id': '7', 'image': 'https://i.postimg.cc/ZR2tSHRk/caramel-slice.jpg', 'name': 'Caramel Slice', 'price': '4.50'},
     {'id': '8', 'image': 'https://i.postimg.cc/SKQp7j5P/poached-egg-toast.jpg', 'name': 'Poached Egg on Toast', 'price': '7.00'},
-    {'id': '9', 'image': 'https://i.postimg.cc/SKQp7j5P/poached-egg-toast.jpg', 'name': 'beer', 'price': '100.00'},
+    {'id': '9', 'image': 'https://i.postimg.cc/rz6KLxyb/glass-cold-beer-wooden-surface-sunny-day.jpg', 'name': 'Beer Of The Day', 'price': '6.00'},
 ]
 
 @app.route('/')
@@ -125,4 +125,6 @@ def checkout_pay():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
+
+application = app
