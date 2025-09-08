@@ -2,92 +2,79 @@
 <html>
 <title>Checkout</title>
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/checkout.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/checkout.css">
 </head>
 <body class="backgd">
-    <!--To - Do -->
-    <!--Complete quantity template-->
-    
-  <!--Navigation Bar-->
-  <ul>
-      <img class="Logo" src="https://i.postimg.cc/R0tyC8tr/204-B-Logo-removebg-preview.png" alt="Logo">
 
+<!-- Navigation Bar -->
+<ul>
+    <img class="Logo" src="https://i.postimg.cc/R0tyC8tr/204-B-Logo-removebg-preview.png" alt="Logo">
     <li><a href="/contact_us">Contact Us</a></li>
     <li><a href="/about_us">About Us</a></li>
     <li><a class="active" href="/checkout">Checkout</a></li>
-    <li><a href="/menu">Menu</a></li> 
-  </ul>
+    <li><a href="/menu">Menu</a></li>
+</ul>
 
-  <!--Checkout Title-->
-  <h1 class="rectangle">Checkout</h1>
+<!-- Checkout Title -->
+<h1 class="rectangle">Checkout</h1>
 
-  <!--Checkout container-->
-  <div class="checkout_con">
-    <br>
-    <!--individual containers for checkout features-->
-    <div class="checkout_con1">
+<!-- Checkout Container -->
+<div class="checkout_con">
+    {% for item in cart %}
+    <div class="checkout_item">
+        <!-- Remove Button -->
+        <div class="container">
+            <form method="POST" action="/remove_from_cart">
+                <input type="hidden" name="item_id" value="{{ item['id'] }}">
+                <button type="submit">
+                    <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:70px; height:70px;">
+                </button>
+            </form>
+        </div>
 
-      <div class="container">
-        <button type=button style="margin-top:75px; margin-left:1100px;">
-          <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:70px; height:70px;">
-        </button>
-      </div>
+        <!-- Item Image -->
+        <div class="image">
+            <img src="{{ item.get('image', 'https://via.placeholder.com/150') }}" alt="{{ item['name'] }}">
+        </div>
 
-      <div class="image">
+        <!-- Item Details -->
+        <div class="details">
+            <h2>{{ item['name'] }}</h2>
+            <p>Price: ${{ "%.2f"|format(item['price']) }}</p>
+        </div>
 
-      </div>
+        <!-- Quantity Update -->
+        <div class="rectangle_qty">
+            <form method="POST" action="/update_cart">
+                <input type="hidden" name="item_id" value="{{ item['id'] }}">
+                <label for="qty">Quantity:</label>
+                <select name="qty">
+                    {% for i in range(1, 11) %}
+                    <option value="{{ i }}" {% if i == item['qty'] %}selected{% endif %}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Update</button>
+            </form>
+        </div>
 
-      <div class="details">
-
-      </div>
-
-      <div class="rectangle1">
-          <!--Alternative option to replace plus/minus buttons-->
-          <!--team decision once approved!-->
-          <label for="quantity1">Quantity (between 1 and 7))</label>
-          <input type="number" id="quantity1" name="quantity" min="1" max="7">
-          <button type="button1">CHANGE</button>
-      </div>
-
-  </div>
-
-
-    <br>
-    <br>
-    <br>
-
-    <!--Container_2-->
-    <div class="checkout_con2">
-
-
-          <div class="container">
-        <button type=button style="margin-top:65px; margin-left:1100px;">
-          <img src="https://i.postimg.cc/pTjv7Sdp/bin.jpg" style="width:70px; height:70px;">
-        </button>
-      </div>
-
-      <div class="image2">
-      </div>
-
-      <div class="details2">
-      </div>
-    
-        <div class="rectangle2">
-          <!--Alternative option to replace plus/minus buttons-->
-          <!--team decision once approved!-->
-          <label for="quantity1">Quantity (between 1 and 7))</label>
-          <input type="number" id="quantity1" name="quantity" min="1" max="7">
-          <button type="button1">CHANGE</button>
-      </div>
-
+        <!-- Subtotal -->
+        <div class="subtotal">
+            Subtotal: ${{ "%.2f"|format(item['price'] * item['qty']) }}
+        </div>
     </div>
-  </div>
-</body>
-<!--Footer-->
+    {% endfor %}
+
+    <!-- Total -->
+    <div class="total">
+        <h3>Total: ${{ "%.2f"|format(total) }}</h3>
+    </div>
+</div>
+
+<!-- Footer -->
 <footer>
 </footer>
 
-
+</body>
 </html>

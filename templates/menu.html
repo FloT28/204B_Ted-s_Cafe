@@ -11,12 +11,17 @@
 <!--Navigation Bar-->
 <ul>
   <img class="Logo" src="https://i.postimg.cc/R0tyC8tr/204-B-Logo-removebg-preview.png" alt="Logo">
-
   <li><a href="/contact_us">Contact Us</a></li>
   <li><a href="/about_us">About Us</a></li>
   <li><a href="/checkout">Checkout</a></li>
   <li><a class="active" href="/menu">Menu</a></a></li>
 </ul>
+
+
+
+<!-- hidden iframe, this is the post request reciever -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
 <!--Menu Title-->
 <div class="bg">
@@ -26,30 +31,31 @@
 <!--Menu Container (background)-->
 <div class="menu_con">
   {% for item in items %} <!-- Loop through each dictionary in the items list -->
-    <div class="card"> <!-- New card for each menu item (each dict, new card.) -->
-      <img class="card_img" src="{{ item['image'] }}" alt=""> <!-- Access the image URL from the dictionary -->
-      
-  <h1 class="card_name">{{ item['name'] }}</h1> <!-- name -->
-  <p class="price">${{ item['price'] }}</p> <!-- price -->
-      
-      <!-- Quantity Dropdown -->
-      <label for="Quantity">Quantity:</label> 
-      <select name="Quantity" id="qty"> 
-        <option value="qty1">1</option>
-        <option value="qty2">2</option>
-        <option value="qty3">3</option>
-        <option value="qty4">4</option>
-        <option value="qty5">5</option>
-        <option value="qty6">6</option>
-        <option value="qty7">7</option>
-        <option value="qty8">8</option>
-        <option value="qty9">9</option>
-        <option value="qty10">10</option> <!-- max 10, maybe more later? -->
-      </select>
-      <p><button></button></p>
-    </div>
+<div class="card">
+  <img class="card_img" src="{{ item['image'] }}" alt="">
+  <h1 class="card_name">{{ item['name'] }}</h1>
+  <p class="price">${{ item['price'] }}</p>
+
+  <form method="POST" action="/add_to_cart" target="hidden_iframe">
+    <input type="hidden" name="item_id" value="{{ item['id'] }}">
+    <label for="qty">Quantity:</label>
+    <select name="qty" id="qty">
+      {% for i in range(1, 11) %}
+        <option value="{{ i }}">{{ i }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit"></button>
+  </form>
+</div>
   {% endfor %}
 </div>
+
+<div class="show_cart">
+
+  <a href="/checkout">
+    <p>View Cart ({{ session.get('cart') | length if session.get('cart') else 0 }})</p>
+</div>
+
 </body>
 
 
