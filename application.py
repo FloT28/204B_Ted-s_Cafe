@@ -125,6 +125,6 @@ def checkout_pay():
     
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
 application = app
